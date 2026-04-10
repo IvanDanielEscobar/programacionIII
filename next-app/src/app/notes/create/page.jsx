@@ -6,7 +6,7 @@ export default function page() {
 //    function fetch notas => me trae un array de notas con su id, title y content
 
     return(
-        <section className="flex p-20 justify-center items-center gap-10">
+        <section className="w-full flex p-20 justify-center items-center gap-10">
 
             <form className="flex flex-col flex-1 p-6 rounded-lg bg-zinc-800 font-sans">
                 <Link href={"/notes"} className="self-start mb-4 text-white font-semibold">

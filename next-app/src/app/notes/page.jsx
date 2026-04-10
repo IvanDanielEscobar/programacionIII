@@ -47,9 +47,6 @@ export default function page() {
                         Ver Nota
                       </Link>
                     </section>
-
-                 
-
                 </main>
         </div>
     );
