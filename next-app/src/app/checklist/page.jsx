@@ -17,14 +17,14 @@ export default function ChecklistPage() {
   };
 
   return (
-    <div className="flex flex-1 items-center justify-center flex-col p-10 font-sans min-h-[70vh] w-full">
+    <div className="flex flex-1 items-center justify-center flex-col p-10 font-sans min-h-[70vh] w-full bg-zinc-1000">
       <h1 className="text-xl font-bold mb-4 uppercase tracking-tighter">
         Checklist
       </h1>
       
       <div className="flex gap-2 mb-6">
         <input 
-          className="border-2 border-zinc-700 p-2 flex-grow dark:text-zinc-500" 
+          className="border-2 border-zinc-700 p-2 grow dark:text-zinc-500" 
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Escribir tarea..."
