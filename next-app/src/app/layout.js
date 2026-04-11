@@ -24,28 +24,97 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <nav className="w-full">
-           <ul className="flex space-x-4 p-4">
-            <li>
-              <Link href="/" className="text-sinc-50 hover:text-gray-900">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/notes" className="text-gray-700 hover:text-gray-900">
-                Notes
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="text-gray-700 hover:text-gray-900">
-                About
-              </Link>
-            </li>
-           </ul>
-        </nav>
+        <header className="bg-zinc-900 shadow-sm">
+          <nav className="relative bg-zinc-900 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="relative flex h-16 items-center justify-between">
+
+                {/* Lado izquierdo */}
+                <section className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  {/* Logo */}
+                  <article className="flex shrink-0 items-center">
+                    <span className="text-white font-bold text-xl tracking-tight">NoteApp</span>
+                  </article>
+
+                  {/* Enlaces */}
+                  <article className="hidden sm:ml-10 sm:block">
+                    <div className="flex space-x-4">
+                      <Link 
+                        href="/" 
+                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                      >
+                        Home
+                      </Link>
+                      <Link 
+                        href="/notes" 
+                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                      >
+                        Notas
+                      </Link>
+                      <Link 
+                        href="/notes/create" 
+                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                      >
+                        Nueva Nota
+                      </Link>
+                      <Link href="/checklist" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">
+                        Checklist
+                      </Link>
+                      <Link 
+                        href="/about" 
+                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                      >
+                        About
+                      </Link>
+                    </div>
+                  </article>
+                </section>
+
+                {/* Lado Derecho- Perfil */}
+                <article className="flex items-center space-x-4">
+                  <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+                    ID
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </nav>
+        </header>
+        <main className="w-full ">
         {children}
-        <footer className="w-full p-4 text-center text-gray-500">
-          &copy; 2023 My App. All rights reserved.
+        </main>
+        <footer className="w-full bg-zinc-900 shadow-smborder-t border-gray-200 p-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-600">
+            {/* Informacion Personal */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2">Desarrollador</h3>
+              <p>Ivan Daniel Escobar</p>
+              <p>Estudiante de Tecnicatura Superior en Desarrollo de Software</p>
+              <p>Río Cuarto, Córdoba</p>
+            </div>
+
+            {/* Informacin del Proyecto */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2">Proyecto</h3>
+              <p>Anotador Next.js</p>
+              <p>Práctico N°1: Rutas y Layouts</p>
+              <p>Año: 2026</p>
+            </div>
+
+            {/* Navegacion */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-2">Navegación</h3>
+              <ul className="space-y-1">
+                <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+                <li><Link href="/notes" className="hover:text-blue-600">Mis Notas</Link></li>
+                <li><Link href="/about" className="hover:text-blue-600">Sobre nosotros</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center mt-8 pt-4 border-t border-gray-100 italic">
+            &copy; {new Date().getFullYear()} NoteApp Proyect..
+          </div>
         </footer>
       </body>
     </html>

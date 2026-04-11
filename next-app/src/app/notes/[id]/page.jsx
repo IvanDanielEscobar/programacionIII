@@ -9,10 +9,9 @@ export default async function page({ params }) {
   // funcion buscar notas (localhost:3000/notes/{id}) => me trae un objeto nota {id: 1, title: "Nota 1", content: "Contenido de la nota 1"}
 
   const nota = {
-    id: 1,
-    title: "Arrays",
+    id: id,
+    title: id === "1" ? "Arrays" : `Nota ${id}`,
     content: "Los arrays son una estructura de datos que nos permiten almacenar multiples valores en una sola variable. En JavaScript, los arrays se definen utilizando corchetes [] y pueden contener cualquier tipo de dato, incluyendo otros arrays. Por ejemplo:",
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
 
   return (
