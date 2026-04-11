@@ -41,28 +41,28 @@ export default function RootLayout({ children }) {
                     <div className="flex space-x-4">
                       <Link 
                         href="/" 
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-white/10 hover:text-white transition-all duration-300"
                       >
                         Home
                       </Link>
                       <Link 
                         href="/notes" 
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-white/10 hover:text-white transition-all duration-300"
                       >
                         Notas
                       </Link>
                       <Link 
                         href="/notes/create" 
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-white/10 hover:text-white transition-all duration-300"
                       >
                         Nueva Nota
                       </Link>
-                      <Link href="/checklist" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300">
+                      <Link href="/checklist" className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-white/10 hover:text-white transition-all duration-300">
                         Checklist
                       </Link>
                       <Link 
                         href="/about" 
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-zinc-600 hover:bg-white/10 hover:text-white transition-all duration-300"
                       >
                         About
                       </Link>
@@ -84,11 +84,11 @@ export default function RootLayout({ children }) {
         <main className="w-full ">
         {children}
         </main>
-        <footer className="w-full bg-zinc-900 shadow-smborder-t border-gray-200 p-8">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-600">
+        <footer className="w-full bg-zinc-900 border-t  border-zinc-600 p-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-zinc-600">
             {/* Informacion Personal */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-2">Desarrollador</h3>
+              <h3 className="font-bold text-zinc-600 mb-2">Desarrollador</h3>
               <p>Ivan Daniel Escobar</p>
               <p>Estudiante de Tecnicatura Superior en Desarrollo de Software</p>
               <p>Río Cuarto, Córdoba</p>
@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
 
             {/* Informacin del Proyecto */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-2">Proyecto</h3>
+              <h3 className="font-bold text-zinc-600 mb-2">Proyecto</h3>
               <p>Anotador Next.js</p>
               <p>Práctico N°1: Rutas y Layouts</p>
               <p>Año: 2026</p>
@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
 
             {/* Navegacion */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-2">Navegación</h3>
+              <h3 className="font-bold text-zinc-600 mb-2">Navegación</h3>
               <ul className="space-y-1">
                 <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
                 <li><Link href="/notes" className="hover:text-blue-600">Mis Notas</Link></li>
@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
               </ul>
             </div>
           </div>
-          <div className="text-center mt-8 pt-4 border-t border-gray-100 italic">
+          <div className="text-center mt-8 pt-4 border-t border-zinc-600 italic">
             &copy; {new Date().getFullYear()} NoteApp Proyect..
           </div>
         </footer>
